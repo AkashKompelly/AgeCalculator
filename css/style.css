@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgb(242, 200, 200), rgba(170, 32, 250, 0.714));
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contenet-wrapper {
+  background: rgb(240, 128, 128);
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 15px 30px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.contenet-wrapper h1 {
+  color: white;
+  font-weight: 700;
+  padding: 20px 5px;
+  width: 100%;
+  text-align: center;
+  font-size: 35px;
+}
+.input-wrapper {
+  width: 100%;
+  text-align: center;
+  padding: 10px 5px;
+}
+
+input[type="date"] {
+  position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: calc(100% - 10px);
+  background-size: 30px;
+  width: auto;
+  height: auto;
+}
+
+.input-wrapper input {
+  border: none;
+  outline: none;
+  font-size: 25px;
+  border-radius: 15px;
+  padding: 0px 60px 0px 30px;
+  height: 60px;
+}
+
+.input-wrapper button {
+  border: none;
+  border-radius: 15px;
+  padding: 10px 25px;
+  font-size: 20px;
+  background: lightgreen;
+  color: black;
+  font-weight: 900px;
+  margin-left: 40px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  height: 60px;
+}
+.input-wrapper button:hover {
+  background-color: black;
+  color: lightgreen;
+}
+
+.result {
+  font-size: large;
+  margin-top: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: self-end;
+  color: white;
+}
+
+.label {
+  font-size: 40px;
+  background: white;
+  box-shadow: rgb(240, 128, 128) 0px 3px 8px;
+  padding: 10px;
+  border-radius: 15px;
+  color: black;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 672px) {
+  .contenet-wrapper {
+    width: auto;
+    margin: 0 auto;
+  }
+  .result {
+    width: 100%;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contenet-wrapper {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 30px;
+  }
+  .input-wrapper #btn {
+    margin-left: 0;
+    font-size: 20px;
+  }
+
+  .label {
+    height: 30px;
+    width: 30px;
+    font-size: 12px;
+    text-align: center;
+  }
+}
